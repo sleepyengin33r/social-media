@@ -1,3 +1,40 @@
 {
+  // 1. General Python Editor Behavior
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+
+  // 2. Linter & Analysis (Pylance + Ruff)
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+
+  // 3. Testing (pytest is standard)
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+
+  // 4. File Explorer Cleanup (Hide clutter)
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/.venv": false, // Keep this visible to verify env is active
+    "**/*.egg-info": true
+  },
+
+  // 5. Terminal (macOS specific)
+  "terminal.integrated.defaultProfile.osx": "zsh",
+
   "editor.formatOnSave": true
 }
